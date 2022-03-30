@@ -14,4 +14,20 @@ function mostraAcudits(){
                   
                   )
             .catch(()=>console.log('error'))
+     document.getElementById("button1").hidden = false;
+     document.getElementById("button2").hidden = false;
+     document.getElementById("button3").hidden = false;       
 }
+//valoració acudits
+var today = new Date;
+var reportAcudits = [];
+
+function addToList(score) {
+      var reportAcudit = {}
+      reportAcudit.joke = seccio.innerHTML;
+      reportAcudit.score = score;
+      reportAcudit.date = new Date().toISOString()
+      reportAcudits.push(reportAcudit)
+      console.log(reportAcudits)
+  }
+
