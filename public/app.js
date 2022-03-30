@@ -7,7 +7,7 @@ function mostraAcudits(){
             .then(data => {
                   const element = document.createElement('div');
                   element.id='pare';
-                  element.innerHTML = `<h4>${data.attachments[0].text}</h4>`
+                  element.innerHTML = `<h4>${data.attachments[0].text}</h4>`;
                   seccio.appendChild(element);
             }
                   //console.log(data.attachments[0].text)
