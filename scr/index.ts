@@ -30,7 +30,7 @@ function acudit(){
 
 
 const url='https://icanhazdadjoke.com/slack';
-const peticio= fetch(url, { method: "GET", headers: {'Accept': 'application/json'}});
+//const peticio= fetch(url, { method: "GET", headers: {'Accept': 'application/json'}});
 const el = document.createElement('element');
 const seccio: any = document.getElementById('app')?.appendChild(el);
 /*
@@ -44,7 +44,7 @@ document.getElementById("button3")!.hidden = false;
 }
 */
  function mostraAcudits(){
-          peticio.then(dades => dades.clone().json())
+  fetch(url, { method: "GET", headers: {'Accept': 'application/json'}}).then(dades => dades.clone().json())
             .then(data => {
                 el.textContent = data.attachments[0].text;
           })
@@ -57,7 +57,7 @@ document.getElementById("button3")!.hidden = false;
 }
 
 const urlChuk='https://api.chucknorris.io/jokes/random';
-const peticioChuk=fetch(urlChuk, { method: "GET", headers: {'Accept': 'application/json'}});
+//const peticioChuk=fetch(urlChuk, { method: "GET", headers: {'Accept': 'application/json'}});
 /*
 async function mostraAcuditsChuk(){
     const joke = await peticioChuk;
@@ -71,7 +71,7 @@ async function mostraAcuditsChuk(){
 */
 function mostraAcuditsChuk(){
    
-     peticioChuk.then(dades => dades.clone().json())
+  fetch(urlChuk, { method: "GET", headers: {'Accept': 'application/json'}}).then(dades => dades.clone().json())
           .then(data => {
             el.textContent = data.value;
           },)

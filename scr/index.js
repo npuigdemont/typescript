@@ -21,7 +21,7 @@ function acudit() {
 }
 ;
 var url = 'https://icanhazdadjoke.com/slack';
-var peticio = fetch(url, { method: "GET", headers: { 'Accept': 'application/json' } });
+//const peticio= fetch(url, { method: "GET", headers: {'Accept': 'application/json'}});
 var el = document.createElement('element');
 var seccio = (_a = document.getElementById('app')) === null || _a === void 0 ? void 0 : _a.appendChild(el);
 /*
@@ -35,7 +35,7 @@ document.getElementById("button3")!.hidden = false;
 }
 */
 function mostraAcudits() {
-    peticio.then(function (dades) { return dades.clone().json(); })
+    fetch(url, { method: "GET", headers: { 'Accept': 'application/json' } }).then(function (dades) { return dades.clone().json(); })
         .then(function (data) {
         el.textContent = data.attachments[0].text;
     })["catch"](function (err) { return console.log('error: ' + err); });
@@ -44,7 +44,7 @@ function mostraAcudits() {
     document.getElementById("button3").hidden = false;
 }
 var urlChuk = 'https://api.chucknorris.io/jokes/random';
-var peticioChuk = fetch(urlChuk, { method: "GET", headers: { 'Accept': 'application/json' } });
+//const peticioChuk=fetch(urlChuk, { method: "GET", headers: {'Accept': 'application/json'}});
 /*
 async function mostraAcuditsChuk(){
     const joke = await peticioChuk;
@@ -57,7 +57,7 @@ async function mostraAcuditsChuk(){
 }
 */
 function mostraAcuditsChuk() {
-    peticioChuk.then(function (dades) { return dades.clone().json(); })
+    fetch(urlChuk, { method: "GET", headers: { 'Accept': 'application/json' } }).then(function (dades) { return dades.clone().json(); })
         .then(function (data) {
         el.textContent = data.value;
     })["catch"](function (err) { return console.log('error: ' + err); });
