@@ -33,6 +33,8 @@ const url='https://icanhazdadjoke.com/slack';
 //const peticio= fetch(url, { method: "GET", headers: {'Accept': 'application/json'}});
 const el = document.createElement('element');
 const seccio: any = document.getElementById('app')?.appendChild(el);
+
+
 /*
 async function mostraAcudits(){
     const joke = await peticio;

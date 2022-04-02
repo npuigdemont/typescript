@@ -9,36 +9,39 @@
     <link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.js" integrity="sha512-6Qi7qYyfdjqiOXOqpU4OYEPpcm4hE0IQGP/8YY9csFpkdbaOcSWlSWwkdADw/8nOtWqsjdibbiBsRhoRyjk1YQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body  {
-            background-image: url(https://orig13.deviantart.net/64e8/f/2010/230/0/6/skies_of_blue_by_naturedrop.jpg);
-            background-color: #cccccc;
-        }
-    </style>
+    <link rel="stylesheet" href="scr/index.css">
 </head>
 
 <body>
     
         <nav class="navbar navbar-expand-md navbar-light py-1 m-3 p-5">
-            <h4 id="weather" class="weather text-white">Today:</h4>
+            <h4 id="weather" class="weather text-black-50">Today:</h4>
         </nav>
     
     <script src="scr/index.js"></script>
-    <div class="card text-center col-md-4 m-5 position-absolute top-50 start-50 translate-middle">
-        <div class="card-header text-md-center">
-            <h3>You want to laugh?</h3>
-        </div>
-        <div class="card-body text-md-center">
+    
+    <div class="card border-0 col-md-5 m-5 position-absolute top-50 start-50 translate-middle">
+        <img class="card-img" src="scr/svg/blob (1).svg" alt="formes de colors">
+        
+        <div class="card-img-overlay">
+        
+            <h3 class="card-title ms-5 ps-5"><br><br> You want to laugh?</h3>
+        
+        <div class="card-body text-md-center p-5">
             <h4 id="app"></h4>
             <script src="scr/index.js"></script>
-            <div class="scoreButton m-2">
-                <button type="button" onclick="addToList(1)" id="button1" hidden class="btn-outline-danger"><i class="fa fa-frown-o fa-3x m-1" aria-hidden="true"></i></button>
+            <div class="scoreButton m-2 mx-auto">
+                <img id="button1" onclick="addToList(1)" src="scr/svg/tag_faces_black_24dp.svg" aria-hidden="true">
+               <!-- <button type="button" onclick="addToList(1)" id="button1" hidden class="btn-outline-danger"><i src="scr/svg/tag_faces_black_24dp.svg" aria-hidden="true"></i></button>-->
                 <button type="button" onclick="addToList(2)" id="button2" hidden class="btn-outline-warning"><i class="fa fa-meh-o fa-3x m-1" aria-hidden="true"></i></button>
                 <button type="button" onclick="addToList(3)" id="button3" hidden class="btn-outline-success"><i class="fa fa-smile-o fa-3x m-1" aria-hidden="true"></i></button>
             </div>
-            <button type="button" id="btn" class="success btn btn-outline-secondary" onclick="acudit()">Next joke</button>
+            <div class="mx-auto position-relative">
+                <button type="button" id="btn" class="success btn btn-secondary" onclick="acudit()">Next joke</button>
+            </div>
         </div>
     </div>
-    
+</div>
+</div>
 </body>
 </html>
