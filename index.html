@@ -21,7 +21,8 @@
     <script src="scr/index.js"></script>
     
     <div class="card border-0 col-md-5 m-5 position-absolute top-50 start-50 translate-middle">
-        <img class="card-img" src="scr/svg/blob (1).svg" alt="formes de colors">
+        <img class="card-img" id="fons" src="scr/svg/blob.svg" alt="formes de colors">
+       
         
         <div class="card-img-overlay">
         
@@ -31,10 +32,10 @@
             <h4 id="app"></h4>
             <script src="scr/index.js"></script>
             <div class="scoreButton m-2 mx-auto">
-                <img id="button1" onclick="addToList(1)" src="scr/svg/tag_faces_black_24dp.svg" aria-hidden="true">
-               <!-- <button type="button" onclick="addToList(1)" id="button1" hidden class="btn-outline-danger"><i src="scr/svg/tag_faces_black_24dp.svg" aria-hidden="true"></i></button>-->
-                <button type="button" onclick="addToList(2)" id="button2" hidden class="btn-outline-warning"><i class="fa fa-meh-o fa-3x m-1" aria-hidden="true"></i></button>
-                <button type="button" onclick="addToList(3)" id="button3" hidden class="btn-outline-success"><i class="fa fa-smile-o fa-3x m-1" aria-hidden="true"></i></button>
+                <img type="button" id="button1" onclick="addToList(1)" hidden src="scr/svg/sentiment_very_dissatisfied_black_24dp.svg" aria-hidden="true">
+                <img type="button" id="button2" onclick="addToList(2)" hidden src="scr/svg/sentiment_satisfied_black_24dp.svg" aria-hidden="true">
+                <img type="button" id="button3" onclick="addToList(3)" hidden src="scr/svg/tag_faces_black_24dp.svg" aria-hidden="true">
+                
             </div>
             <div class="mx-auto position-relative">
                 <button type="button" id="btn" class="success btn btn-secondary" onclick="acudit()">Next joke</button>

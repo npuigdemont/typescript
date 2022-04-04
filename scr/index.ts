@@ -19,13 +19,16 @@ function weather() {
   }
 	
 
-
-//acudits
+var imatge = document.getElementById('fons') as HTMLImageElement;
+;//acudits
 function acudit(){
     
     var random = Math.ceil(Math.random()*2);
     
   random == 1 ? mostraAcudits(): mostraAcuditsChuk();
+  random == 1 ? imatge?.setAttribute("src", "/scr/svg/blob1.svg")
+              : imatge?.setAttribute("src", "/scr/svg/blob2.svg");
+
 };
 
 
