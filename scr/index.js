@@ -15,12 +15,15 @@ function weather() {
     });
 }
 var imatge = document.getElementById('fons');
-; //acudits
+var dir = 'scr/svg/';
+//acudits
 function acudit() {
     var random = Math.ceil(Math.random() * 2);
     random == 1 ? mostraAcudits() : mostraAcuditsChuk();
-    random == 1 ? imatge === null || imatge === void 0 ? void 0 : imatge.setAttribute("src", "/scr/svg/blob1.svg")
-        : imatge === null || imatge === void 0 ? void 0 : imatge.setAttribute("src", "/scr/svg/blob2.svg");
+    //random == 1 ? imatge?.setAttribute("style", "background-image: url(" + dir + "blob1.svg); background-repeat: no-repeat; background-size: 388px 388px")
+    //            : imatge?.setAttribute("style", "background-image: url(" + dir + "blob2.svg); background-repeat: no-repeat; background-size: 388px 388px");
+    random == 1 ? imatge.setAttribute("src", 'scr/svg/blob1.svg')
+        : imatge.setAttribute("src", 'scr/svg/blob2.svg');
 }
 ;
 var url = 'https://icanhazdadjoke.com/slack';
